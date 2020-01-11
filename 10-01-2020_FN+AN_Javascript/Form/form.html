@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ballon D'or Nominee</title>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/form.css">
+    </head>
+    <body>        
+        <div style="text-align: center; padding-top: 20px;">
+            <h2>Ballon D'or Nominee</h2>
+        </div>
+        <div id="form">
+            <div class="container">
+                <label for="name"><b>Name</b></label>
+                <input id="name" type="text" placeholder="Enter Name" name="name" required>
+
+                <label for="country"><b>Country</b></label>
+                <select name="country" id="country">
+                    <option value="netherland">Netherlands</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="france">France</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="brazil">Brazil</option>
+                </select>
+                
+                <label for="search"><b>Search Nominees</b></label>
+                <input type="text" id ="search" placeholder="Search Players">
+                <div style="width: 100%;">    
+                    <p style="width: 100%; text-align: justify;" class="players container" id="players">messi, ronaldo, vandijk, dejong, alisson, kante, debruyne,mbappe,mane,trent,robertson,deligt</p>
+                </div>
+
+                <button id="sort" class="btn button" type="button" onclick="sort()">Sort Nominee</button>
+                <div style="width: 100%;">
+                    <p style="width: 100%; text-align: justify;" class="players container" id="sortPlayer">messi, ronaldo, vandijk, dejong, alisson, kante, debruyne,mbappe,mane,trent,robertson,deligt</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/form.js"></script>
+    </body>
+</html>

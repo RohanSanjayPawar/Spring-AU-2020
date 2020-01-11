@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ballon D'or Nominee Login</title>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>        
+        <div style="text-align: center; padding-top: 20px;">
+            <h2>Ballon D'or Nominee</h2>
+        </div>
+        <div id="form">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+                <label for="pwd"><b>Password</b></label>
+                <input id="pwd" type="password" placeholder="Enter Password" name="pwd" required>
+                <label for="con_pwd"><b>Confirm Password</b></label>
+                <input id="con_pwd" type="password" placeholder="Confirm Password" name="con_pwd" required>
+                <button id="submit" class="btn button" type="button" onclick="validate()">Login</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="same" class="alert alert-danger" style="display: none;">
+                The passwords do not match!
+            </div>
+            <div id="minLength" class="alert alert-danger" style="display: none;">
+                Password must be atleast 8 characters long and not more than 50 characters long
+            </div>
+            <div id="username" class="alert alert-danger" style="display: none;">
+                Username must be atleast 8 characters long and not more than 50 characters long
+            </div>
+            <div id="numeric" class="alert alert-danger" style="display: none;">
+                Password Must contain a number
+            </div>
+            <div id="lower" class="alert alert-danger" style="display: none;">
+                Password Must contain a lowercase letter
+            </div>
+            <div id="upper" class="alert alert-danger" style="display: none;">
+                Password Must contain an uppercase letter
+            </div>
+            <div id="special" class="alert alert-danger" style="display: none;">
+                Password Must contain a special character
+            </div>
+            <div id="abc" class="alert alert-danger" style="display: none;">
+                Password Must contain abc as part of the string
+            </div>
+            <div id="normal" class="alert alert-success" style="display: none;">
+                Username and Password is correct!
+            </div>
+        </div>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>
