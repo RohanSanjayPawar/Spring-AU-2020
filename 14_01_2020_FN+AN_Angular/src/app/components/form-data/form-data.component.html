@@ -1,0 +1,23 @@
+<div style="text-align: center; padding-top: 20px;">
+    <h2>Ballon D'or Nominee</h2>
+</div>
+
+<div id="form">
+    <div class="container" [formGroup]="playerForm">
+        <label for="fname"><b>First Name</b></label>
+        <input id="fname" type="text" formControlName="firstName">
+
+        <label for="lname"><b>Last Name</b></label>
+        <input id="lname" type="text" formControlName="lastName">
+
+        <label for="nationality"><b>Nationality</b></label>
+        <input id="nationality" type="text" formControlName="nationality">
+
+        <label for="club"><b>Club</b></label>
+        <input id="club" type="text" formControlName="club">
+        <br>
+        <button id="submit" class="btn button" (click)="addDetails()" [disabled]="!playerForm.valid">Add Nominee</button>
+    </div>
+</div>
+
+

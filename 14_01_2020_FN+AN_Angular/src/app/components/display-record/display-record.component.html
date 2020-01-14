@@ -1,0 +1,25 @@
+<div style="text-align: center; padding-top: 20px;">
+    <h2>Ballon D'or Nominee</h2>
+</div>
+
+<div id="display">
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>First Name</b></td>
+                    <td><b>Last Name</b></td>
+                    <td><b>Nationality</b></td>
+                    <td><b>Club</b></td>
+                    <td><b>Delete</b></td>
+                </tr>
+                <tr *ngFor="let nominee of nominees;let i = index">
+                    <td>{{ nominee.firstName }}</td>
+                    <td>{{ nominee.lastName }}</td>
+                    <td>{{ nominee.nationality }}</td>
+                    <td>{{ nominee.club }}</td>
+                    <td (click)="delete(i)"><button>Delete</button></td>
+                </tr>
+        </table>
+    </div>
+</div>
