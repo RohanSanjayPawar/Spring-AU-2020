@@ -1,0 +1,7 @@
+1 OnePlus 35000 10
+2 MI 10000 25
+3 Oppo 15000 15
+4 Moto 20000 12
+5 Samsung 45000 7
+6 Apple 75000 5
+7 Vivo 13000 40
