@@ -2,17 +2,16 @@ package com.rohan.accolite.fruitMarket;
 
 import java.util.Random;
 
-public class Customer implements Runnable {
-	@Override
-	public void run() {
+public class Customer {
 
+	Runnable customer = () -> {
 		// A count to regularize the outflow of fruits.
 		// A customer can buy 3 fruits in the market continuously, then sleeps for 10s
 		int count = 3;
 
 		while (true) {
 			synchronized (Market.fruits) {
-				
+
 				// The customer is picky and picks random fruit every day
 				int random = new Random().nextInt(Market.fruitsSelection.length);
 				String fruit = Market.fruitsSelection[random];
@@ -34,11 +33,11 @@ public class Customer implements Runnable {
 					}
 				} else {
 					Market.fruits.put(fruit, Market.fruits.get(fruit) - 1);
-					System.out.println(Thread.currentThread().getName() + " bought: " + fruit+ " from the market");
+					System.out.println(Thread.currentThread().getName() + " bought: " + fruit + " from the market");
 					System.out.println("Remaining fruits in the market: " + Market.getSum());
 					Market.fruits.notifyAll();
 					count--;
-					
+
 					// Customer buys fruits at different time each day.
 					try {
 						int sleep = new Random().nextInt(10) * 1000;
@@ -49,6 +48,5 @@ public class Customer implements Runnable {
 				}
 			}
 		}
-	}
-
+	};
 }

@@ -2,11 +2,9 @@ package com.rohan.accolite.fruitMarket;
 
 import java.util.Random;
 
-public class Farmer implements Runnable {
+public class Farmer{
 
-	@Override
-	public void run() {
-
+	Runnable farmer = () -> {
 		// A count to regularize the flow of fruit production.
 		// A farmer can sell 3 fruits in the market continuously, then sleeps for 10s
 		int count = 3;
@@ -57,6 +55,6 @@ public class Farmer implements Runnable {
 				}
 			}
 		}
-	}
+	};
 
 }
