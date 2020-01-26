@@ -11,16 +11,16 @@
 	<session-factory>
 
 		<!-- Database connection settings -->
-		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/player_db</property>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/shoppingCart</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">Rohan@2008</property>
+		<property name="connection.password">root@123</property>
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">100</property>
 
 		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
 		<!-- Disable the second-level cache -->
 		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
