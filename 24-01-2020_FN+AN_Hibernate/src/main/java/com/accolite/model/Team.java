@@ -10,8 +10,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "VEHICLE_TYPE", discriminatorType = DiscriminatorType.STRING)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "TEAM_TYPE", discriminatorType = DiscriminatorType.STRING)
 public class Team {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
